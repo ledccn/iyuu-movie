@@ -1,0 +1,585 @@
+{
+  "id": 34453008,
+  "@form": "douban",
+  "directors": [
+    {
+      "alt": "https://movie.douban.com/celebrity/1336806/",
+      "id": "1336806",
+      "name": "林妍 Yan Lin",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1461919115.51.jpg",
+      "role": "导演 Director",
+      "works": [
+        "https://movie.douban.com/subject/35152536/",
+        "https://movie.douban.com/subject/34991672/",
+        "https://movie.douban.com/subject/25785314/"
+      ]
+    }
+  ],
+  "writers": [
+    {
+      "alt": "https://movie.douban.com/celebrity/1451785/",
+      "id": "1451785",
+      "name": "艾小图 Ai Xiao Tu",
+      "avatar": "",
+      "role": "编剧 Writer",
+      "works": [
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    }
+  ],
+  "casts": [
+    {
+      "alt": "https://movie.douban.com/celebrity/1345741/",
+      "id": "1345741",
+      "name": "宋伊人 Ireine Song",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1578488629.82.jpg",
+      "role": "演员 Actress (饰 原浅)",
+      "works": [
+        "https://movie.douban.com/subject/21350556/",
+        "https://movie.douban.com/subject/26848645/",
+        "https://movie.douban.com/subject/25911595/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1391670/",
+      "id": "1391670",
+      "name": "邓超元 Chaoyuan Deng",
+      "avatar": "https://img1.doubanio.com/view/celebrity/raw/public/p1591603498.09.jpg",
+      "role": "演员 Actor (饰 秦深)",
+      "works": [
+        "https://movie.douban.com/subject/30246439/",
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/35303777/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1364986/",
+      "id": "1364986",
+      "name": "王润泽 Runze Wang",
+      "avatar": "https://img1.doubanio.com/view/celebrity/raw/public/p1573550703.37.jpg",
+      "role": "演员 Actor (饰 宋司翊)",
+      "works": [
+        "https://movie.douban.com/subject/35633626/",
+        "https://movie.douban.com/subject/26974779/",
+        "https://movie.douban.com/subject/26877087/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1425222/",
+      "id": "1425222",
+      "name": "洪杉杉 Shanshan Hong",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1576065711.81.jpg",
+      "role": "演员 Actress (饰 凌薇)",
+      "works": [
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/30465840/",
+        "https://movie.douban.com/subject/34839360/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1392415/",
+      "id": "1392415",
+      "name": "何泽远 Zeyuan He",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1588760249.42.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/35295558/",
+        "https://movie.douban.com/subject/34950406/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1376452/",
+      "id": "1376452",
+      "name": "陈柯帆 Kefan Chen",
+      "avatar": "https://img1.doubanio.com/view/celebrity/raw/public/p1572622318.38.jpg",
+      "role": "演员 Actor/Actress",
+      "works": [
+        "https://movie.douban.com/subject/6984046/",
+        "https://movie.douban.com/subject/26877087/",
+        "https://movie.douban.com/subject/24732881/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1388995/",
+      "id": "1388995",
+      "name": "崔莉雅 Liya Cui",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1522380626.34.jpg",
+      "role": "演员 Actress",
+      "works": [
+        "https://movie.douban.com/subject/35480792/",
+        "https://movie.douban.com/subject/35141439/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1407515/",
+      "id": "1407515",
+      "name": "赵奂然 Huanran Zhao",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1545620183.42.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/35209733/",
+        "https://movie.douban.com/subject/35087777/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1395348/",
+      "id": "1395348",
+      "name": "胡宇轩 Yuxuan Hu",
+      "avatar": "https://img2.doubanio.com/view/personage/raw/public/a5147400c1a5c2355a9b72f24f6cc2cf.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/35231822/",
+        "https://movie.douban.com/subject/26848645/",
+        "https://movie.douban.com/subject/35256235/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1389868/",
+      "id": "1389868",
+      "name": "张恒羽 Hengyu Zhang",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/pikuOFsyRlJwcel_avatar_uploaded1520619974.2.jpg",
+      "role": "演员 Actress",
+      "works": [
+        "https://movie.douban.com/subject/26928226/",
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/25823837/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1443887/",
+      "id": "1443887",
+      "name": "钟嘉诚 Jiacheng Zhong",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1599049121.63.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/27180943/",
+        "https://movie.douban.com/subject/35182499/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1353185/",
+      "id": "1353185",
+      "name": "赵麒 Qi Zhao",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1478051385.4.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/35429466/",
+        "https://movie.douban.com/subject/2295811/",
+        "https://movie.douban.com/subject/35517425/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1416947/",
+      "id": "1416947",
+      "name": "单思杰 Sijie Shan",
+      "avatar": "https://img1.doubanio.com/view/celebrity/raw/public/p1562151847.57.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/35202793/",
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/30290872/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1445208/",
+      "id": "1445208",
+      "name": "贺开朗 Kailang He",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1601176676.91.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/26339609/",
+        "https://movie.douban.com/subject/35163988/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1430166/",
+      "id": "1430166",
+      "name": "孙晓伦 Xiaolun Sun",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/pln0PDEWLl9wcel_avatar_uploaded1579616084.61.jpg",
+      "role": "演员 Actress",
+      "works": [
+        "https://movie.douban.com/subject/26703476/",
+        "https://movie.douban.com/subject/26774173/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1364257/",
+      "id": "1364257",
+      "name": "董博睿 Borui Dong",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1478245126.04.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/35164328/",
+        "https://movie.douban.com/subject/4707205/",
+        "https://movie.douban.com/subject/6312211/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1316150/",
+      "id": "1316150",
+      "name": "刘慧 Hui Liu",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1528691363.25.jpg",
+      "role": "演员 Actress",
+      "works": [
+        "https://movie.douban.com/subject/26691509/",
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/26616334/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1360180/",
+      "id": "1360180",
+      "name": "齐思钧 Sijun Qi",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1582235072.54.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/35404034/",
+        "https://movie.douban.com/subject/35161214/",
+        "https://movie.douban.com/subject/35859355/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1349356/",
+      "id": "1349356",
+      "name": "周岩 Yan Zhou",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1436496644.5.jpg",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/26776469/",
+        "https://movie.douban.com/subject/25777370/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1364140/",
+      "id": "1364140",
+      "name": "韩姝妹 Shumei Han",
+      "avatar": "https://img1.doubanio.com/view/personage/raw/public/4445ef8054646fc0b776f0546da599f9.jpg",
+      "role": "演员 Actress",
+      "works": [
+        "https://movie.douban.com/subject/35372742/",
+        "https://movie.douban.com/subject/35452438/",
+        "https://movie.douban.com/subject/35307437/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1451786/",
+      "id": "1451786",
+      "name": "李林谦 Linqian Li",
+      "avatar": "https://img2.doubanio.com/view/personage/raw/public/b2ba69307fc397bbca3cfc8ea074655e.jpg",
+      "role": "演员 Actress",
+      "works": [
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/35528903/",
+        "https://movie.douban.com/subject/35566788/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1451787/",
+      "id": "1451787",
+      "name": "张研 Yan Zhang",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1621534442.92.jpg",
+      "role": "演员 Actor/Actress",
+      "works": [
+        "https://movie.douban.com/subject/35082299/",
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/35794249/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1451788/",
+      "id": "1451788",
+      "name": "林芷伊 Lin Zhi Yi",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1613648155.54.jpg",
+      "role": "演员 Actor/Actress",
+      "works": [
+        "https://movie.douban.com/subject/27102569/",
+        "https://movie.douban.com/subject/35125443/",
+        "https://movie.douban.com/subject/26808256/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1451789/",
+      "id": "1451789",
+      "name": "张展硕 Zhanshuo Zhang",
+      "avatar": "",
+      "role": "演员 Actor",
+      "works": [
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/34858081/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1479640/",
+      "id": "1479640",
+      "name": "张星瑶 Xingyao Zhang",
+      "avatar": "https://img1.doubanio.com/view/personage/raw/public/ee54071ff7f315d32667f58811825998.jpg",
+      "role": "演员 Actress (饰 邓迟)",
+      "works": [
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/34991583/",
+        "https://movie.douban.com/subject/36136315/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1380026/",
+      "id": "1380026",
+      "name": "刘心椿 Aaron",
+      "avatar": "https://img1.doubanio.com/view/celebrity/raw/public/p1507296596.79.jpg",
+      "role": "制片人 Producer",
+      "works": [
+        "https://movie.douban.com/subject/34453008/",
+        "https://movie.douban.com/subject/26738092/",
+        "https://movie.douban.com/subject/26954013/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1447290/",
+      "id": "1447290",
+      "name": "罗媛元 Yuanyuan Luo",
+      "avatar": "https://img1.doubanio.com/view/celebrity/raw/public/p1605601690.99.jpg",
+      "role": "制片人 Producer",
+      "works": [
+        "https://movie.douban.com/subject/35196753/",
+        "https://movie.douban.com/subject/35096877/",
+        "https://movie.douban.com/subject/34453008/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1434609/",
+      "id": "1434609",
+      "name": "敦淇 Qi Dun",
+      "avatar": "https://img2.doubanio.com/view/celebrity/raw/public/p1584957479.21.jpg",
+      "role": "制片人 Producer",
+      "works": [
+        "https://movie.douban.com/subject/4922787/",
+        "https://movie.douban.com/subject/35196753/",
+        "https://movie.douban.com/subject/35359490/"
+      ]
+    },
+    {
+      "alt": "https://movie.douban.com/celebrity/1387254/",
+      "id": "1387254",
+      "name": "杨芸晴 Sunnee",
+      "avatar": "https://img9.doubanio.com/view/celebrity/raw/public/p1610180138.5.jpg",
+      "role": "片尾曲演唱",
+      "works": [
+        "https://movie.douban.com/subject/27605698/",
+        "https://movie.douban.com/subject/27102569/",
+        "https://movie.douban.com/subject/30157162/"
+      ]
+    }
+  ],
+  "title": "我凭本事单身",
+  "original_title": "",
+  "aka": [],
+  "imdb": "tt13428278",
+  "alt": "https://movie.douban.com/subject/34453008/",
+  "year": "2020",
+  "rating": {
+    "max": "10",
+    "average": "6.1",
+    "numRaters": "11812",
+    "min": "2"
+  },
+  "images": {
+    "small": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2620866924.jpg",
+    "large": "https://img9.doubanio.com/view/photo/l_ratio_poster/public/p2620866924.jpg",
+    "medium": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2620866924.jpg"
+  },
+  "subtype": "tvseries",
+  "summary": "来自艺术系的大学生们在追求艺术理想的路上，克服重重困难，最终收获爱情、友谊，走近梦想的校园青春励志故事。背景设定在艺术学院雕塑系，故事围绕立志成为雕塑家的高冷学霸秦深、怀揣油画梦的少女原浅两位主角展开。",
+  "pubdates": [
+    "2020-10-17(中国大陆)"
+  ],
+  "mainland_pubdate": "",
+  "durations": [
+    "45分钟"
+  ],
+  "tags": [],
+  "languages": [
+    "汉语普通话"
+  ],
+  "genres": [
+    "剧情",
+    "爱情"
+  ],
+  "countries": [
+    "中国大陆"
+  ],
+  "videos": [],
+  "photos": [],
+  "awards": [],
+  "@type": "tvseries",
+  "JsonLD": {
+    "@context": "http://schema.org",
+    "name": "我凭本事单身",
+    "url": "/subject/34453008/",
+    "image": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2620866924.jpg",
+    "director": [
+      {
+        "@type": "Person",
+        "url": "/celebrity/1336806/",
+        "name": "林妍 Yan Lin"
+      }
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "url": "/celebrity/1451785/",
+        "name": "艾小图 Ai Xiao Tu"
+      }
+    ],
+    "actor": [
+      {
+        "@type": "Person",
+        "url": "/celebrity/1345741/",
+        "name": "宋伊人 Ireine Song"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1391670/",
+        "name": "邓超元 Chaoyuan Deng"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1364986/",
+        "name": "王润泽 Runze Wang"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1425222/",
+        "name": "洪杉杉 Shanshan Hong"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1392415/",
+        "name": "何泽远 Zeyuan He"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1376452/",
+        "name": "陈柯帆 Kefan Chen"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1388995/",
+        "name": "崔莉雅 Liya Cui"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1407515/",
+        "name": "赵奂然 Huanran Zhao"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1395348/",
+        "name": "胡宇轩 Yuxuan Hu"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1389868/",
+        "name": "张恒羽 Hengyu Zhang"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1443887/",
+        "name": "钟嘉诚 Jiacheng Zhong"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1353185/",
+        "name": "赵麒 Qi Zhao"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1416947/",
+        "name": "单思杰 Sijie Shan"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1445208/",
+        "name": "贺开朗 Kailang He"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1430166/",
+        "name": "孙晓伦 Xiaolun Sun"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1364257/",
+        "name": "董博睿 Borui Dong"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1316150/",
+        "name": "刘慧 Hui Liu"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1360180/",
+        "name": "齐思钧 Sijun Qi"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1349356/",
+        "name": "周岩 Yan Zhou"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1364140/",
+        "name": "韩姝妹 Shumei Han"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1451786/",
+        "name": "李林谦 Linqian Li"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1451787/",
+        "name": "张研 Yan Zhang"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1451788/",
+        "name": "林芷伊 Lin Zhi Yi"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1451789/",
+        "name": "张展硕 Zhanshuo Zhang"
+      },
+      {
+        "@type": "Person",
+        "url": "/celebrity/1479640/",
+        "name": "张星瑶 Xingyao Zhang"
+      }
+    ],
+    "datePublished": "2020-10-17",
+    "genre": [
+      "剧情",
+      "爱情"
+    ],
+    "duration": "PT0H45M",
+    "description": "来自艺术系的大学生们在追求艺术理想的路上，克服重重困难，最终收获爱情、友谊，走近梦想的校园青春励志故事。背景设定在艺术学院雕塑系，故事围绕立志成为雕塑家的高冷学霸秦深、怀揣油画梦的少女原浅两位主角展开...",
+    "@type": "TVSeries",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingCount": "11812",
+      "bestRating": "10",
+      "worstRating": "2",
+      "ratingValue": "6.0"
+    }
+  },
+  "episodes_count": [
+    "24"
+  ]
+}
