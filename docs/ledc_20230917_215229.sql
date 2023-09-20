@@ -370,35 +370,6 @@ LOCK TABLES `meta_name_relation` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `meta_sites`
---
-
-DROP TABLE IF EXISTS `meta_sites`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `meta_sites` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `name` varchar(50) NOT NULL COMMENT '名字',
-  `protocol` varchar(10) NOT NULL DEFAULT 'https' COMMENT '协议',
-  `domain` varchar(100) NOT NULL COMMENT '域名',
-  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `update_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='元信息站点';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `meta_sites`
---
-
-LOCK TABLES `meta_sites` WRITE;
-/*!40000 ALTER TABLE `meta_sites` DISABLE KEYS */;
-INSERT INTO `meta_sites` VALUES (1,'douban','https','movie.douban.com','2023-09-17 21:49:28','2023-09-17 21:49:52');
-/*!40000 ALTER TABLE `meta_sites` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `meta_subject`
 --
 

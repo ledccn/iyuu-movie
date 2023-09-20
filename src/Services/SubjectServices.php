@@ -3,6 +3,7 @@
 namespace Iyuu\Movie\Services;
 
 use Illuminate\Pipeline\Pipeline;
+use Iyuu\Movie\Constants\SiteEnum;
 use Iyuu\Movie\Locker\SubjectLocker;
 use Iyuu\Movie\Model\MetaSubject;
 use Iyuu\Movie\Pipelines\Subject\CelebrityPipeline;
@@ -31,7 +32,7 @@ class SubjectServices
     public static function create(SubjectData $input): int
     {
         $sitename = $input->getForm();
-        $sites_id = SiteServices::getSiteId($sitename);
+        $sites_id = SiteEnum::create($sitename)->getId();
         $subject_sn = $input->id;
         $model = MetaSubject::getModelByUnique($sites_id, $subject_sn);
         if ($model) {
