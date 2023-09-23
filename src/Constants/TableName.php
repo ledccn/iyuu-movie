@@ -8,6 +8,5 @@ namespace Iyuu\Movie\Constants;
 class TableName
 {
     const meta_celebrity = 'meta_celebrity';
-    const meta_sites = 'meta_sites';
     const meta_subject = 'meta_subject';
 }

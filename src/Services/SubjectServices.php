@@ -3,7 +3,10 @@
 namespace Iyuu\Movie\Services;
 
 use Illuminate\Pipeline\Pipeline;
+use Iyuu\Movie\Api\Dispatcher;
 use Iyuu\Movie\Constants\SiteEnum;
+use Iyuu\Movie\Dispatch\SubTypeEnum;
+use Iyuu\Movie\Dispatch\TypeEnum;
 use Iyuu\Movie\Locker\SubjectLocker;
 use Iyuu\Movie\Model\MetaSubject;
 use Iyuu\Movie\Pipelines\Subject\CelebrityPipeline;
@@ -32,10 +35,10 @@ class SubjectServices
     public static function create(SubjectData $input): int
     {
         $sitename = $input->getForm();
-        $sites_id = SiteEnum::create($sitename)->getId();
+        $sites_id = SiteEnum::create($sitename)->value;
         $subject_sn = $input->id;
         $model = MetaSubject::getModelByUnique($sites_id, $subject_sn);
-        if ($model) {
+        if ($model && $model->state) {
             return $model->id;
         }
 
@@ -68,6 +71,12 @@ class SubjectServices
                 'douban' => self::updateByDouban($model, $input),
                 default => ''
             };
+
+            try {
+                $siteEnum = SiteEnum::from($model->sites_id);
+                Dispatcher::success(TypeEnum::create($siteEnum->name), SubTypeEnum::subject, $model->subject_sn);
+            } catch (Throwable $throwable) {
+            }
 
             return $model->id;
         });

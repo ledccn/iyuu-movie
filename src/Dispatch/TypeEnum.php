@@ -1,13 +1,14 @@
 <?php
+declare (strict_types=1);
 
-namespace Iyuu\Movie\Constants;
+namespace Iyuu\Movie\Dispatch;
 
 use InvalidArgumentException;
 
 /**
- * 支持站点
+ * 枚举：任务主类型
  */
-enum SiteEnum: int
+enum TypeEnum: int
 {
     /**
      * 豆瓣
@@ -20,7 +21,7 @@ enum SiteEnum: int
     case imdb = 2;
 
     /**
-     * 获取站点
+     * 获取枚举
      * @param string $name
      * @return self
      */
@@ -38,7 +39,7 @@ enum SiteEnum: int
     {
         $list = self::toArray();
         if (!array_key_exists($name, $list)) {
-            throw new InvalidArgumentException('不支持的站点');
+            throw new InvalidArgumentException('主类型不存在');
         }
 
         return $list[$name];
@@ -52,5 +53,18 @@ enum SiteEnum: int
     public static function toArray(): array
     {
         return array_column(self::cases(), 'value', 'name');
+    }
+
+    /**
+     * 枚举条目转为数组
+     * - 值 => 名
+     * @return array
+     */
+    public static function forSelect(): array
+    {
+        return array_combine(
+            array_column(self::cases(), 'value'),
+            array_column(self::cases(), 'name')
+        );
     }
 }

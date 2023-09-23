@@ -2,6 +2,8 @@
 
 namespace Iyuu\Movie;
 
+use Iyuu\Movie\Dispatch\MetaDispatch;
+use Iyuu\Movie\Dispatch\MetaDispatchObserver;
 use Iyuu\Movie\Model\MetaCelebrity;
 use Iyuu\Movie\Model\MetaCelebrityRelation;
 use Iyuu\Movie\Model\MetaContent;
@@ -81,5 +83,7 @@ class Bootstrap implements \Webman\Bootstrap
         MetaTagsRelation::observe(MetaTagsRelationObserver::class);
         MetaTitle::observe(MetaTitleObserver::class);
         MetaTitleRelation::observe(MetaTitleRelationObserver::class);
+
+        MetaDispatch::observe(MetaDispatchObserver::class);
     }
 }
