@@ -18,6 +18,11 @@ use support\exception\BusinessException;
 class Dispatcher
 {
     /**
+     * Redis队列最大长度
+     */
+    const REDIS_LIST_MAX_LENGTH = 500;
+
+    /**
      * 创建
      * @param TypeEnum $type
      * @param SubTypeEnum $subTypeEnum
@@ -78,8 +83,11 @@ class Dispatcher
                         ->chunk(10, function (Collection $collection) use ($redisList) {
                             /** @var MetaDispatch $model */
                             foreach ($collection as $model) {
-                                self::push($model, $redisList);
+                                if (!self::push($model, $redisList)) {
+                                    return false;
+                                }
                             }
+                            return true;
                         });
                 }
             }
@@ -90,14 +98,20 @@ class Dispatcher
      * 将值插入到列表的尾部(最右边)
      * @param MetaDispatch $model
      * @param RedisList $redisList
-     * @return void
+     * @return bool
      */
-    protected static function push(MetaDispatch $model, RedisList $redisList): void
+    protected static function push(MetaDispatch $model, RedisList $redisList): bool
     {
+        if (self::REDIS_LIST_MAX_LENGTH <= $redisList->length()) {
+            return false;
+        }
+
         if ($redisList->push($model->unique_id, $model->payload)) {
             $model->dispatch_time = time();
             $model->save();
+            return true;
         }
+        return false;
     }
 
     /**

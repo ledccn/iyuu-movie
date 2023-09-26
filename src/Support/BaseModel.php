@@ -12,11 +12,6 @@ use support\Model;
 class BaseModel extends Model
 {
     /**
-     * @var string
-     */
-    protected $connection = 'mysql';
-
-    /**
      * 格式化日期
      *
      * @param DateTimeInterface $date

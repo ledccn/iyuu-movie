@@ -37,21 +37,23 @@ class SubjectServices
         $sitename = $input->getForm();
         $sites_id = SiteEnum::create($sitename)->value;
         $subject_sn = $input->id;
-        $model = MetaSubject::getModelByUnique($sites_id, $subject_sn);
-        if ($model && $model->state) {
-            return $model->id;
-        }
-
         $lock = SubjectLocker::lock($sites_id . ':' . $subject_sn, 10, true);
         if (!$lock->acquire()) {
             throw new BusinessException('未获取到锁');
         }
 
-        $model = new MetaSubject();
-        $model->sites_id = $sites_id;
-        $model->subject_sn = $subject_sn;
-        if (true !== $model->save()) {
-            throw new BusinessException('创建影视条目失败');
+        $model = MetaSubject::getModelByUnique($sites_id, $subject_sn);
+        if ($model) {
+            if ($model->state) {
+                return $model->id;
+            }
+        } else {
+            $model = new MetaSubject();
+            $model->sites_id = $sites_id;
+            $model->subject_sn = $subject_sn;
+            if (true !== $model->save()) {
+                throw new BusinessException('创建影视条目失败');
+            }
         }
 
         return self::update($sitename, $model, $input);

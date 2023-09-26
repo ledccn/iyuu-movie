@@ -16,6 +16,7 @@ class ContentServices
      */
     public static function save(string $content): ?int
     {
+        $content = trim($content);
         if (empty($content)) {
             return null;
         }

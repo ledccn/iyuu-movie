@@ -31,7 +31,12 @@ class TitleServices
         return Db::transaction(function () use ($metaSubject, $data) {
             $pkArray = [];
             $subject_id = $metaSubject->id;
-            foreach ($data as $value) {
+            foreach ($data as $v) {
+                $value = trim($v);
+                if (empty($value)) {
+                    continue;
+                }
+
                 // 影视标题表
                 $sha1 = sha1($value);
                 $model = MetaTitle::updateOrCreate(['sha1' => $sha1], ['title' => $value]);

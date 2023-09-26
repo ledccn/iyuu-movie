@@ -28,7 +28,12 @@ class LanguagesServices
         return Db::transaction(function () use ($metaSubject, $data) {
             $pkArray = [];
             $subject_id = $metaSubject->id;
-            foreach ($data as $value) {
+            foreach ($data as $v) {
+                $value = trim($v);
+                if (empty($value)) {
+                    continue;
+                }
+
                 // 影视语言表
                 $model = MetaLanguage::updateOrCreate(['value' => $value]);
                 $pk = $model->lang_id;

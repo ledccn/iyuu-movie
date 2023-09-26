@@ -48,7 +48,7 @@ class CelebrityServices
                     }
 
                     // 影人名字表
-                    $name_id = NameServices::updateOrCreate($celebrity['name'] ?? '');
+                    $name_id = NameServices::updateOrCreate(trim($celebrity['name'] ?? ''));
                     $model->name = $name_id;
                     $model->state = 1;
                     $model->save();
