@@ -69,10 +69,7 @@ class Dispatcher
         foreach (TypeEnum::cases() as $type) {
             foreach (SubTypeEnum::cases() as $subTypeEnum) {
                 $redisList = new RedisList($type, $subTypeEnum);
-                if ($length = $redisList->length()) {
-                    //群发：调度通知
-                    call_user_func($callable, $type, $subTypeEnum, $length);
-                } else {
+                if (!$redisList->length()) {
                     //压入队列
                     $where = [
                         'type' => $type->value,
@@ -89,6 +86,11 @@ class Dispatcher
                             }
                             return true;
                         });
+                }
+
+                //群发：调度通知
+                if ($length = $redisList->length()) {
+                    call_user_func($callable, $type, $subTypeEnum, $length);
                 }
             }
         }
