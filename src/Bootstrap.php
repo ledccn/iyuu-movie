@@ -23,6 +23,7 @@ use Iyuu\Movie\Model\MetaTag;
 use Iyuu\Movie\Model\MetaTagsRelation;
 use Iyuu\Movie\Model\MetaTitle;
 use Iyuu\Movie\Model\MetaTitleRelation;
+use Iyuu\Movie\Model\PtTorrent;
 use Iyuu\Movie\Observer\MetaCelebrityObserver;
 use Iyuu\Movie\Observer\MetaCelebrityRelationObserver;
 use Iyuu\Movie\Observer\MetaContentObserver;
@@ -42,6 +43,7 @@ use Iyuu\Movie\Observer\MetaTagObserver;
 use Iyuu\Movie\Observer\MetaTagsRelationObserver;
 use Iyuu\Movie\Observer\MetaTitleObserver;
 use Iyuu\Movie\Observer\MetaTitleRelationObserver;
+use Iyuu\Movie\Observer\PtTorrentObserver;
 use Workerman\Worker;
 
 /**
@@ -83,6 +85,7 @@ class Bootstrap implements \Webman\Bootstrap
         MetaTagsRelation::observe(MetaTagsRelationObserver::class);
         MetaTitle::observe(MetaTitleObserver::class);
         MetaTitleRelation::observe(MetaTitleRelationObserver::class);
+        PtTorrent::observe(PtTorrentObserver::class);
 
         MetaDispatch::observe(MetaDispatchObserver::class);
     }
