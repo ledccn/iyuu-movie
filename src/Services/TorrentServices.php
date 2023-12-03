@@ -47,8 +47,7 @@ class TorrentServices
         $model->sid = $sid;
         $model->torrent_id = $torrent_id;
         $model->group_id = $input->group_id ?? 0;
-        $rs = $model->save();
-        if (true !== $rs) {
+        if (true !== $model->save()) {
             throw new BusinessException('创建种子失败');
         }
 
@@ -78,9 +77,11 @@ class TorrentServices
                         [TeamPipeline::class, 'process'],
                     ])
                     ->thenReturn();
+
+                $model->level = $input->level ?? 0;
                 $model->save();
             } catch (Throwable $throwable) {
-                Log::error(__METHOD__ . '创建种子出错：' . $throwable->getMessage());
+                Log::error(__METHOD__ . '创建种子【管道】出错：' . $throwable->getMessage());
                 throw new BusinessException($throwable->getMessage(), $throwable->getCode());
             }
         });
