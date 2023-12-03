@@ -15,7 +15,7 @@ use plugin\admin\app\model\Base;
  * @property integer $audiocodec 音频编码
  * @property integer $standard 分辨率
  * @property integer $team 制作组
- * @property integer $level 分级
+ * @property integer $level 分级(观看年龄)
  * @property integer $is_subject 是条目
  * @property string $uri 统一资源标识符
  * @property string $create_time 创建时间
@@ -37,23 +37,12 @@ class PtTorrent extends Base
      */
     protected $primaryKey = 'id';
     /**
-     * The name of the "created at" column.
-     *
-     * @var string|null
-     */
-    const CREATED_AT = 'create_time';
-
-    /**
-     * The name of the "updated at" column.
-     *
-     * @var string|null
-     */
-    const UPDATED_AT = 'update_time';
-
-    /**
-     * Indicates if the Model should be timestamped.
+     * Indicates if the model should be timestamped.
      *
      * @var bool
      */
-    public $timestamps = true;
+    public $timestamps = false;
+
+    
+    
 }
