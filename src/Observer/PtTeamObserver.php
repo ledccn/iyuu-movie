@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtTeam;
  */
 class PtTeamObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtTeam $model
@@ -108,5 +108,5 @@ class PtTeamObserver
      */
     public function restored(PtTeam $model): void
     {
-    } 
+    }
 }

@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtTorrent;
  */
 class PtTorrentObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtTorrent $model
@@ -108,5 +108,5 @@ class PtTorrentObserver
      */
     public function restored(PtTorrent $model): void
     {
-    } 
+    }
 }

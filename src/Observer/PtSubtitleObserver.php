@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtSubtitle;
  */
 class PtSubtitleObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtSubtitle $model
@@ -108,5 +108,5 @@ class PtSubtitleObserver
      */
     public function restored(PtSubtitle $model): void
     {
-    } 
+    }
 }

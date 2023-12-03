@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtTitle;
  */
 class PtTitleObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtTitle $model
@@ -108,5 +108,5 @@ class PtTitleObserver
      */
     public function restored(PtTitle $model): void
     {
-    } 
+    }
 }

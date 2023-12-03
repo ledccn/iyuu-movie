@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtStandard;
  */
 class PtStandardObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtStandard $model
@@ -108,5 +108,5 @@ class PtStandardObserver
      */
     public function restored(PtStandard $model): void
     {
-    } 
+    }
 }

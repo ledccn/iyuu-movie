@@ -16,37 +16,33 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaSubjectAttent extends BaseModel
 {
     /**
-     * The table associated with the Model.
-     *
-     * @var string
-     */
-    protected $table = 'meta_subject_attent';
-
-    /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
-
-    /**
      * The name of the "created at" column.
      *
      * @var string|null
      */
     const CREATED_AT = 'create_time';
-
     /**
      * The name of the "updated at" column.
      *
      * @var string|null
      */
     const UPDATED_AT = 'update_time';
-
     /**
      * Indicates if the Model should be timestamped.
      *
      * @var bool
      */
     public $timestamps = true;
+    /**
+     * The table associated with the Model.
+     *
+     * @var string
+     */
+    protected $table = 'meta_subject_attent';
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
 }

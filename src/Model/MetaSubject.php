@@ -40,12 +40,29 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaSubject extends BaseModel
 {
     /**
+     * The name of the "created at" column.
+     *
+     * @var string|null
+     */
+    const CREATED_AT = 'create_time';
+    /**
+     * The name of the "updated at" column.
+     *
+     * @var string|null
+     */
+    const UPDATED_AT = 'update_time';
+    /**
+     * Indicates if the Model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true;
+    /**
      * The table associated with the Model.
      *
      * @var string
      */
     protected $table = 'meta_subject';
-
     /**
      * The primary key associated with the table.
      *
@@ -54,25 +71,15 @@ class MetaSubject extends BaseModel
     protected $primaryKey = 'id';
 
     /**
-     * The name of the "created at" column.
-     *
-     * @var string|null
+     * 获取模型
+     * @param int $sites_id 电影站点主键
+     * @param int $subject_sn 第三方影片ID
+     * @return Builder|self|null
      */
-    const CREATED_AT = 'create_time';
-
-    /**
-     * The name of the "updated at" column.
-     *
-     * @var string|null
-     */
-    const UPDATED_AT = 'update_time';
-
-    /**
-     * Indicates if the Model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = true;
+    public static function getModelByUnique(int $sites_id, int $subject_sn): self|Builder|null
+    {
+        return static::where(self::uniqueWhere($sites_id, $subject_sn))->first();
+    }
 
     /**
      * 唯一约束：查询条件
@@ -86,16 +93,5 @@ class MetaSubject extends BaseModel
             'sites_id' => $sites_id,
             'subject_sn' => $subject_sn
         ];
-    }
-
-    /**
-     * 获取模型
-     * @param int $sites_id 电影站点主键
-     * @param int $subject_sn 第三方影片ID
-     * @return Builder|self|null
-     */
-    public static function getModelByUnique(int $sites_id, int $subject_sn): self|Builder|null
-    {
-        return static::where(self::uniqueWhere($sites_id, $subject_sn))->first();
     }
 }

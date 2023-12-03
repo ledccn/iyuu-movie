@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtAudiocodec;
  */
 class PtAudiocodecObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtAudiocodec $model
@@ -108,5 +108,5 @@ class PtAudiocodecObserver
      */
     public function restored(PtAudiocodec $model): void
     {
-    } 
+    }
 }

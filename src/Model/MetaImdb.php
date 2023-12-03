@@ -14,24 +14,23 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaImdb extends BaseModel
 {
     /**
+     * Indicates if the Model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+    /**
      * The table associated with the Model.
      *
      * @var string
      */
     protected $table = 'meta_imdb';
-
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
     protected $primaryKey = 'id';
-    /**
-     * Indicates if the Model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
 
 
 }

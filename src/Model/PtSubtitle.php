@@ -13,25 +13,23 @@ use plugin\admin\app\model\Base;
 class PtSubtitle extends Base
 {
     /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+    /**
      * The table associated with the model.
      *
      * @var string
      */
     protected $table = 'pt_subtitle';
-
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
     protected $primaryKey = 'subtitle_id';
-    /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
 
-    
-    
+
 }

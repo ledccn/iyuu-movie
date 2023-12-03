@@ -13,25 +13,23 @@ use plugin\admin\app\model\Base;
 class PtMedium extends Base
 {
     /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+    /**
      * The table associated with the model.
      *
      * @var string
      */
     protected $table = 'pt_medium';
-
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
     protected $primaryKey = 'medium_id';
-    /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
 
-    
-    
+
 }

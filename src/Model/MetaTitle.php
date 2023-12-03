@@ -14,25 +14,23 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaTitle extends BaseModel
 {
     /**
+     * Indicates if the Model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+    /**
      * The table associated with the Model.
      *
      * @var string
      */
     protected $table = 'meta_title';
-
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
     protected $primaryKey = 'title_id';
-    /**
-     * Indicates if the Model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
-
     /**
      * 可批量赋值的属性
      * - The attributes that are mass assignable.

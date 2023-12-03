@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtCategory;
  */
 class PtCategoryObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtCategory $model
@@ -108,5 +108,5 @@ class PtCategoryObserver
      */
     public function restored(PtCategory $model): void
     {
-    } 
+    }
 }

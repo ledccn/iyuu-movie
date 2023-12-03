@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtMedium;
  */
 class PtMediumObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtMedium $model
@@ -108,5 +108,5 @@ class PtMediumObserver
      */
     public function restored(PtMedium $model): void
     {
-    } 
+    }
 }

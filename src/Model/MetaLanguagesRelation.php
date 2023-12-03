@@ -15,25 +15,23 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaLanguagesRelation extends BaseModel
 {
     /**
+     * Indicates if the Model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+    /**
      * The table associated with the Model.
      *
      * @var string
      */
     protected $table = 'meta_languages_relation';
-
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
     protected $primaryKey = 'id';
-    /**
-     * Indicates if the Model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
-
     /**
      * 可批量赋值的属性
      * - The attributes that are mass assignable.
@@ -49,6 +47,17 @@ class MetaLanguagesRelation extends BaseModel
     protected $guarded = [];
 
     /**
+     * 获取模型
+     * @param int $lang_id 影视语言主键
+     * @param int $subject_id 影视条目主键
+     * @return Builder|self|null
+     */
+    public static function getModelByUnique(int $lang_id, int $subject_id): self|Builder|null
+    {
+        return static::where(self::uniqueWhere($lang_id, $subject_id))->first();
+    }
+
+    /**
      * 唯一约束：查询条件
      * @param int $lang_id 影视语言主键
      * @param int $subject_id 影视条目主键
@@ -60,16 +69,5 @@ class MetaLanguagesRelation extends BaseModel
             'lang_id' => $lang_id,
             'subject_id' => $subject_id,
         ];
-    }
-
-    /**
-     * 获取模型
-     * @param int $lang_id 影视语言主键
-     * @param int $subject_id 影视条目主键
-     * @return Builder|self|null
-     */
-    public static function getModelByUnique(int $lang_id, int $subject_id): self|Builder|null
-    {
-        return static::where(self::uniqueWhere($lang_id, $subject_id))->first();
     }
 }

@@ -14,39 +14,35 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaGenre extends BaseModel
 {
     /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
-    protected $table = 'meta_genres';
-
-    /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'genres_id';
-    /**
      * The name of the "created at" column.
      *
      * @var string|null
      */
     const CREATED_AT = 'create_time';
-
     /**
      * The name of the "updated at" column.
      *
      * @var string|null
      */
     const UPDATED_AT = 'update_time';
-
     /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
      */
     public $timestamps = true;
-
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'meta_genres';
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'genres_id';
     /**
      * 可批量赋值的属性
      * - The attributes that are mass assignable.

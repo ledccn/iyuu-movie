@@ -8,7 +8,7 @@ namespace Iyuu\Movie\Observer;
  */
 class PtSubjectRelationObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtSubjectRelation $model
@@ -106,5 +106,5 @@ class PtSubjectRelationObserver
      */
     public function restored(PtSubjectRelation $model): void
     {
-    } 
+    }
 }

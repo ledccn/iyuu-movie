@@ -10,7 +10,7 @@ use Iyuu\Movie\Model\PtCodec;
  */
 class PtCodecObserver
 {
-   /**
+    /**
      * 监听数据即将创建的事件。
      *
      * @param PtCodec $model
@@ -108,5 +108,5 @@ class PtCodecObserver
      */
     public function restored(PtCodec $model): void
     {
-    } 
+    }
 }

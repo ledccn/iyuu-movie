@@ -31,12 +31,29 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaCelebrity extends BaseModel
 {
     /**
+     * The name of the "created at" column.
+     *
+     * @var string|null
+     */
+    const CREATED_AT = 'create_time';
+    /**
+     * The name of the "updated at" column.
+     *
+     * @var string|null
+     */
+    const UPDATED_AT = 'update_time';
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true;
+    /**
      * The table associated with the model.
      *
      * @var string
      */
     protected $table = 'meta_celebrity';
-
     /**
      * The primary key associated with the table.
      *
@@ -45,25 +62,15 @@ class MetaCelebrity extends BaseModel
     protected $primaryKey = 'celebrity_id';
 
     /**
-     * The name of the "created at" column.
-     *
-     * @var string|null
+     * 获取模型
+     * @param int $sites_id 电影站点主键
+     * @param int $name_sn 第三方影人id
+     * @return Builder|self|null
      */
-    const CREATED_AT = 'create_time';
-
-    /**
-     * The name of the "updated at" column.
-     *
-     * @var string|null
-     */
-    const UPDATED_AT = 'update_time';
-
-    /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = true;
+    public static function getModelByUnique(int $sites_id, int $name_sn): self|Builder|null
+    {
+        return static::where(self::uniqueWhere($sites_id, $name_sn))->first();
+    }
 
     /**
      * 唯一约束：查询条件
@@ -77,16 +84,5 @@ class MetaCelebrity extends BaseModel
             'sites_id' => $sites_id,
             'name_sn' => $name_sn
         ];
-    }
-
-    /**
-     * 获取模型
-     * @param int $sites_id 电影站点主键
-     * @param int $name_sn 第三方影人id
-     * @return Builder|self|null
-     */
-    public static function getModelByUnique(int $sites_id, int $name_sn): self|Builder|null
-    {
-        return static::where(self::uniqueWhere($sites_id, $name_sn))->first();
     }
 }

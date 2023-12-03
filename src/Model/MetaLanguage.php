@@ -14,40 +14,35 @@ use Iyuu\Movie\Support\BaseModel;
 class MetaLanguage extends BaseModel
 {
     /**
-     * The table associated with the Model.
-     *
-     * @var string
-     */
-    protected $table = 'meta_languages';
-
-    /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'lang_id';
-
-    /**
      * The name of the "created at" column.
      *
      * @var string|null
      */
     const CREATED_AT = 'create_time';
-
     /**
      * The name of the "updated at" column.
      *
      * @var string|null
      */
     const UPDATED_AT = 'update_time';
-
     /**
      * Indicates if the Model should be timestamped.
      *
      * @var bool
      */
     public $timestamps = true;
-
+    /**
+     * The table associated with the Model.
+     *
+     * @var string
+     */
+    protected $table = 'meta_languages';
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'lang_id';
     /**
      * 可批量赋值的属性
      * - The attributes that are mass assignable.
