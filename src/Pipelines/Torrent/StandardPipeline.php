@@ -19,7 +19,7 @@ class StandardPipeline implements PipelineInterface
         $input  = $payload->input;
         if ($val = $input->standard) {
             $model = PtStandard::firstOrCreate(['content' => $val]);
-            $payload->model->medium = $model->standard_id;
+            $payload->model->standard = $model->standard_id;
         }
         return $next($payload);
     }

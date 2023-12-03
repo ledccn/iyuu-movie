@@ -19,7 +19,7 @@ class CodecPipeline implements PipelineInterface
         $input  = $payload->input;
         if ($val = $input->codec) {
             $model = PtCodec::firstOrCreate(['content' => $val]);
-            $payload->model->medium = $model->codec_id;
+            $payload->model->codec = $model->codec_id;
         }
         return $next($payload);
     }

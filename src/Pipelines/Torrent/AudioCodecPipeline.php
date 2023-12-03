@@ -19,7 +19,7 @@ class AudioCodecPipeline implements PipelineInterface
         $input  = $payload->input;
         if ($val = $input->audiocodec) {
             $model = PtAudiocodec::firstOrCreate(['content' => $val]);
-            $payload->model->medium = $model->audiocodec_id;
+            $payload->model->audiocodec = $model->audiocodec_id;
         }
         return $next($payload);
     }

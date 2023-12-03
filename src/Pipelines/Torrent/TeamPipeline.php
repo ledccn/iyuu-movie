@@ -19,7 +19,7 @@ class TeamPipeline implements PipelineInterface
         $input  = $payload->input;
         if ($val = $input->team) {
             $model = PtTeam::firstOrCreate(['content' => $val]);
-            $payload->model->medium = $model->team_id;
+            $payload->model->team = $model->team_id;
         }
         return $next($payload);
     }
