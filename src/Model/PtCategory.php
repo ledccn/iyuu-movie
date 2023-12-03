@@ -13,12 +13,6 @@ use plugin\admin\app\model\Base;
 class PtCategory extends Base
 {
     /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
-    /**
      * The table associated with the model.
      *
      * @var string
@@ -31,5 +25,24 @@ class PtCategory extends Base
      */
     protected $primaryKey = 'category_id';
 
+    /**
+     * The name of the "created at" column.
+     *
+     * @var string|null
+     */
+    const CREATED_AT = 'create_time';
 
+    /**
+     * The name of the "updated at" column.
+     *
+     * @var string|null
+     */
+    const UPDATED_AT = 'update_time';
+
+    /**
+     * Indicates if the Model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true;
 }
