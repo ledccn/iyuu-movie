@@ -5,7 +5,8 @@ namespace Iyuu\Movie\Services;
 use Iyuu\Movie\Model\MetaLanguage;
 use Iyuu\Movie\Model\MetaLanguagesRelation;
 use Iyuu\Movie\Model\MetaSubject;
-use support\Db;
+use plugin\admin\app\common\Util;
+use Throwable;
 
 /**
  * 服务：影视语言
@@ -18,6 +19,7 @@ class LanguagesServices
      * @param MetaSubject $metaSubject
      * @param array $data
      * @return array
+     * @throws Throwable
      */
     public static function save(MetaSubject $metaSubject, array $data): array
     {
@@ -25,7 +27,7 @@ class LanguagesServices
             return [];
         }
 
-        return Db::transaction(function () use ($metaSubject, $data) {
+        return Util::db()->transaction(function () use ($metaSubject, $data) {
             $pkArray = [];
             $subject_id = $metaSubject->id;
             foreach ($data as $v) {

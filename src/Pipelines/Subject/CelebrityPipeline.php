@@ -3,6 +3,7 @@
 namespace Iyuu\Movie\Pipelines\Subject;
 
 use Iyuu\Movie\Services\CelebrityServices;
+use Throwable;
 
 /**
  * 流水线：导演、编剧、演职员
@@ -14,6 +15,7 @@ class CelebrityPipeline implements PipelineInterface
      * @param Payload $payload
      * @param callable $next
      * @return mixed
+     * @throws Throwable
      */
     public static function process(Payload $payload, callable $next): mixed
     {

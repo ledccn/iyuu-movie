@@ -5,7 +5,9 @@ namespace Iyuu\Movie\Services;
 use Iyuu\Movie\Model\MetaCountriesRelation;
 use Iyuu\Movie\Model\MetaCountry;
 use Iyuu\Movie\Model\MetaSubject;
+use plugin\admin\app\common\Util;
 use support\Db;
+use Throwable;
 
 /**
  * 服务：影视国家地区
@@ -18,6 +20,7 @@ class CountryServices
      * @param MetaSubject $metaSubject
      * @param array $data
      * @return array
+     * @throws Throwable
      */
     public static function save(MetaSubject $metaSubject, array $data): array
     {
@@ -25,7 +28,7 @@ class CountryServices
             return [];
         }
 
-        return Db::transaction(function () use ($metaSubject, $data) {
+        return Util::db()->transaction(function () use ($metaSubject, $data) {
             $pkArray = [];
             $subject_id = $metaSubject->id;
             foreach ($data as $v) {

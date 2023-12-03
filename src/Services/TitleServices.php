@@ -5,7 +5,8 @@ namespace Iyuu\Movie\Services;
 use Iyuu\Movie\Model\MetaSubject;
 use Iyuu\Movie\Model\MetaTitle;
 use Iyuu\Movie\Model\MetaTitleRelation;
-use support\Db;
+use plugin\admin\app\common\Util;
+use Throwable;
 
 /**
  * 服务：影视标题
@@ -18,6 +19,7 @@ class TitleServices
      * @param MetaSubject $metaSubject
      * @param string|array $data
      * @return array
+     * @throws Throwable
      */
     public static function save(MetaSubject $metaSubject, string|array $data): array
     {
@@ -28,7 +30,7 @@ class TitleServices
             $data = [$data];
         }
 
-        return Db::transaction(function () use ($metaSubject, $data) {
+        return Util::db()->transaction(function () use ($metaSubject, $data) {
             $pkArray = [];
             $subject_id = $metaSubject->id;
             foreach ($data as $v) {

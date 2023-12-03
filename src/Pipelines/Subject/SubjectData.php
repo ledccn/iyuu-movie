@@ -1,6 +1,6 @@
 <?php
 
-namespace Iyuu\Movie\Services;
+namespace Iyuu\Movie\Pipelines\Subject;
 
 use Iyuu\Movie\Support\HasData;
 

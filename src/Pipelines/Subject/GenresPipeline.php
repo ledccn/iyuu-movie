@@ -3,6 +3,7 @@
 namespace Iyuu\Movie\Pipelines\Subject;
 
 use Iyuu\Movie\Services\GenresServices;
+use Throwable;
 
 /**
  * 流水线：影视流派
@@ -13,6 +14,7 @@ class GenresPipeline implements PipelineInterface
      * @param Payload $payload
      * @param callable $next
      * @return mixed
+     * @throws Throwable
      */
     public static function process(Payload $payload, callable $next): mixed
     {

@@ -6,7 +6,8 @@ use Iyuu\Movie\Model\MetaCelebrity;
 use Iyuu\Movie\Model\MetaCelebrityRelation;
 use Iyuu\Movie\Model\MetaNameRelation;
 use Iyuu\Movie\Model\MetaSubject;
-use support\Db;
+use plugin\admin\app\common\Util;
+use Throwable;
 
 /**
  * 服务：名人
@@ -19,6 +20,7 @@ class CelebrityServices
      * @param MetaSubject $metaSubject
      * @param array $data
      * @return array
+     * @throws Throwable
      */
     public static function updateOrCreateByDouban(MetaSubject $metaSubject, array $data): array
     {
@@ -26,7 +28,7 @@ class CelebrityServices
             return [];
         }
 
-        return Db::transaction(function () use ($metaSubject, $data) {
+        return Util::db()->transaction(function () use ($metaSubject, $data) {
             $pkArray = [];
             $subject_id = $metaSubject->id;
             foreach ($data as $celebrity) {

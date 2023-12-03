@@ -5,7 +5,7 @@ namespace Iyuu\Movie\Services;
 use Iyuu\Movie\Model\MetaGenre;
 use Iyuu\Movie\Model\MetaGenresRelation;
 use Iyuu\Movie\Model\MetaSubject;
-use support\Db;
+use plugin\admin\app\common\Util;
 
 /**
  * 服务：影视流派
@@ -18,6 +18,7 @@ class GenresServices
      * @param MetaSubject $metaSubject
      * @param array $data
      * @return array
+     * @throws \Throwable
      */
     public static function save(MetaSubject $metaSubject, array $data): array
     {
@@ -25,7 +26,7 @@ class GenresServices
             return [];
         }
 
-        return Db::transaction(function () use ($metaSubject, $data) {
+        return Util::db()->transaction(function () use ($metaSubject, $data) {
             $pkArray = [];
             $subject_id = $metaSubject->id;
             foreach ($data as $v) {

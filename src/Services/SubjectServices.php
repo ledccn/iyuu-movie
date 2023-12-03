@@ -15,9 +15,10 @@ use Iyuu\Movie\Pipelines\Subject\FieldPipeline;
 use Iyuu\Movie\Pipelines\Subject\GenresPipeline;
 use Iyuu\Movie\Pipelines\Subject\LanguagesPipeline;
 use Iyuu\Movie\Pipelines\Subject\Payload;
+use Iyuu\Movie\Pipelines\Subject\SubjectData;
 use Iyuu\Movie\Pipelines\Subject\TagsPipeline;
 use Iyuu\Movie\Pipelines\Subject\TitlePipeline;
-use support\Db;
+use plugin\admin\app\common\Util;
 use support\exception\BusinessException;
 use Throwable;
 
@@ -30,12 +31,12 @@ class SubjectServices
      * 创建
      * @param SubjectData $input
      * @return int
-     * @throws BusinessException
+     * @throws BusinessException|Throwable
      */
     public static function create(SubjectData $input): int
     {
-        $sitename = $input->getForm();
-        $sites_id = SiteEnum::create($sitename)->value;
+        $site_name = $input->getForm();
+        $sites_id = SiteEnum::create($site_name)->value;
         $subject_sn = $input->id;
         $lock = SubjectLocker::lock($sites_id . ':' . $subject_sn, 10, true);
         if (!$lock->acquire()) {
@@ -56,20 +57,21 @@ class SubjectServices
             }
         }
 
-        return self::update($sitename, $model, $input);
+        return self::update($site_name, $model, $input);
     }
 
     /**
      * 更新
-     * @param string $sitename
+     * @param string $site_name
      * @param MetaSubject $model
      * @param SubjectData $input
      * @return int
+     * @throws Throwable
      */
-    public static function update(string $sitename, MetaSubject $model, SubjectData $input): int
+    public static function update(string $site_name, MetaSubject $model, SubjectData $input): int
     {
-        return Db::transaction(function () use ($sitename, $model, $input) {
-            match ($sitename) {
+        return Util::db()->transaction(function () use ($site_name, $model, $input) {
+            match ($site_name) {
                 'douban' => self::updateByDouban($model, $input),
                 default => ''
             };

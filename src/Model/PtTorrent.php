@@ -2,6 +2,7 @@
 
 namespace Iyuu\Movie\Model;
 
+use Illuminate\Database\Eloquent\Builder;
 use plugin\admin\app\model\Base;
 
 /**
@@ -56,4 +57,36 @@ class PtTorrent extends Base
      * @var bool
      */
     public $timestamps = true;
+
+    /**
+     * 不能批量赋值的属性
+     * - The attributes that aren't mass assignable.
+     * @var array<string>|bool
+     */
+    protected $guarded = [];
+
+    /**
+     * 唯一约束：查询条件
+     * @param int $sid
+     * @param int $torrent_id
+     * @return array
+     */
+    public static function uniqueWhere(int $sid, int $torrent_id): array
+    {
+        return [
+            'sid' => $sid,
+            'torrent_id' => $torrent_id
+        ];
+    }
+
+    /**
+     * 获取模型
+     * @param int $sid
+     * @param int $torrent_id
+     * @return Builder|self|null
+     */
+    public static function uniqueModel(int $sid, int $torrent_id): self|Builder|null
+    {
+        return static::where(self::uniqueWhere($sid, $torrent_id))->first();
+    }
 }

@@ -3,7 +3,6 @@
 namespace Iyuu\Movie\Pipelines\Subject;
 
 use Iyuu\Movie\Model\MetaSubject;
-use Iyuu\Movie\Services\SubjectData;
 
 /**
  * 原始数据
