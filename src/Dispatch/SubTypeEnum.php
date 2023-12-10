@@ -21,6 +21,15 @@ enum SubTypeEnum: int
     case celebrity = 2;
 
     /**
+     * PT站种子列表页
+     */
+    case ptList = 3;
+    /**
+     * PT站种子详情页
+     */
+    case ptDetails = 4;
+
+    /**
      * 获取枚举
      * @param string $name
      * @return self
