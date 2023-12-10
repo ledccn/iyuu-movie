@@ -3,6 +3,10 @@
 namespace Iyuu\Movie\Services;
 
 use Illuminate\Pipeline\Pipeline;
+use Iyuu\Movie\Api\Dispatcher;
+use Iyuu\Movie\Constants\SiteEnum;
+use Iyuu\Movie\Dispatch\SubTypeEnum;
+use Iyuu\Movie\Dispatch\TypeEnum;
 use Iyuu\Movie\Locker\TorrentLocker;
 use Iyuu\Movie\Model\PtTorrent;
 use Iyuu\Movie\Pipelines\Torrent\AudioCodecPipeline;
@@ -80,6 +84,12 @@ class TorrentServices
 
                 $model->level = $input->level ?? 0;
                 $model->save();
+
+                try {
+                    $sid = $model->sid;
+                    Dispatcher::success(TypeEnum::create((int)$sid), SubTypeEnum::ptDetails, $model->torrent_id);
+                } catch (BusinessException $throwable) {
+                }
             } catch (Throwable $throwable) {
                 Log::error(__METHOD__ . '创建种子【管道】出错：' . $throwable->getMessage());
                 throw new BusinessException($throwable->getMessage(), $throwable->getCode());
