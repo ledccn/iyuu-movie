@@ -19,6 +19,49 @@ enum TypeEnum: int
      * IMDb
      */
     case imdb = -2;
+    //////////////////////////////////////////////
+
+    case keepfrds = 1;
+    case pthome = 2;
+    case mteam = 3;
+    case hdsky = 4;
+    case tjupt = 5;
+    case pter = 6;
+    case hdhome = 7;
+    case btschool = 8;
+    case ourbits = 9;
+    case hddolby = 10;
+    case torrentccf = 11;
+    case ttg = 14;
+    case nanyangpt = 15;
+    case hdcity = 17;
+    case nicept = 18;
+    case site52pt = 19;
+    case beitai = 21;
+    case eastgame = 22;
+    case ssd = 23;
+    case soulvoice = 24;
+    case chdbits = 25;
+    case ptsbao = 27;
+    case hdchina = 28;
+    case hdarea = 29;
+    case hdtime = 30;
+    case site1ptba = 31;
+    case hd4fans = 32;
+    case opencd = 33;
+    case joyhd = 36;
+    case dmhy = 37;
+    case upxin = 38;
+    case oshen = 39;
+    case discfan = 40;
+    case hdzone = 41;
+    case hdbd = 44;
+    case byr = 45;
+    case dicmusic = 51;
+    /**
+     * 观众
+     */
+    case audiences = 68;
 
     /**
      * 获取枚举
