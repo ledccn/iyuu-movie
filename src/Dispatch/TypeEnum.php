@@ -13,12 +13,12 @@ enum TypeEnum: int
     /**
      * 豆瓣
      */
-    case douban = 1;
+    case douban = -1;
 
     /**
      * IMDb
      */
-    case imdb = 2;
+    case imdb = -2;
 
     /**
      * 获取枚举
